@@ -1,4 +1,4 @@
-// http://repl.it/oTp/18
+// http://repl.it/oTp/19
 // http://www.careercup.com/question?id=6303093824159744
 import java.lang.*;
 import java.util.*;
@@ -28,12 +28,13 @@ class Main {
         int back = kids.size() - 1;
         int canoeCount = 0;
         
-        while (kids.get(back).getWeight() > 150) {
-            // Trim the fat kids.
-            back--;
-        }
-        
         while (back >= front) {
+            if (kids.get(back).getWeight() > 150) {
+                // Trim the fat kids.
+                back--;
+                continue;
+            }
+            
             canoeCount++;
             
             if (kids.get(front).getWeight() + kids.get(back).getWeight() <= 150) {
