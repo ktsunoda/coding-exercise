@@ -1,5 +1,5 @@
-// http://www.careercup.com/question?id=6303093824159744
 // http://repl.it/r47/3
+// http://www.careercup.com/question?id=6303093824159744
 package main
 
 import "fmt"
