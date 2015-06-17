@@ -1,7 +1,7 @@
-// http://repl.it/spO/2
 package main
 
 import "fmt"
+import "math/rand"
 import "strconv"
 
 func smallestNumberFaster(number *string, removeCount int) *string {
@@ -104,22 +104,31 @@ func main() {
     testSmallestNumbers(number, -1)
 
     number = new(string)
-    *number = "12345"
     
-    testSmallestNumbers(number, -1)
-    testSmallestNumbers(number, 0)
-    testSmallestNumbers(number, 1)
-    testSmallestNumbers(number, 2)
-    testSmallestNumbers(number, 3)
-    testSmallestNumbers(number, 4)
-    testSmallestNumbers(number, 5)
+    for i := 0; i < 1; i++ {
+        *number = strconv.Itoa(rand.Int())
+        
+        for j := -1; j <= len(*number); j++ {
+            testSmallestNumbers(number, j)
+        }
+    }
+    
+    // *number = "12345"
+    
+    // testSmallestNumbers(number, -1)
+    // testSmallestNumbers(number, 0)
+    // testSmallestNumbers(number, 1)
+    // testSmallestNumbers(number, 2)
+    // testSmallestNumbers(number, 3)
+    // testSmallestNumbers(number, 4)
+    // testSmallestNumbers(number, 5)
 
-    *number = "12301"
-    testSmallestNumbers(number, 0)
-    testSmallestNumbers(number, 1)
-    testSmallestNumbers(number, 2)
-    testSmallestNumbers(number, 3)
-    testSmallestNumbers(number, 4)
-    testSmallestNumbers(number, 5)
-    testSmallestNumbers(number, 6)
+    // *number = "12301"
+    // testSmallestNumbers(number, 0)
+    // testSmallestNumbers(number, 1)
+    // testSmallestNumbers(number, 2)
+    // testSmallestNumbers(number, 3)
+    // testSmallestNumbers(number, 4)
+    // testSmallestNumbers(number, 5)
+    // testSmallestNumbers(number, 6)
 }
