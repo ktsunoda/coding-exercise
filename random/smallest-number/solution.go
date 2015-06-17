@@ -1,3 +1,4 @@
+// http://repl.it/spO/4
 package main
 
 import "fmt"
